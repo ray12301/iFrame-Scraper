@@ -5,7 +5,6 @@ import html5lib
 import re
 import os
 import time
-import docx
 
 urls = []
 
