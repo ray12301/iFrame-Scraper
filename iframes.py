@@ -5,6 +5,7 @@ import html5lib
 import re
 import os
 import time
+import docx
 
 urls = []
 
@@ -40,8 +41,6 @@ def lookup(x):
 
     driver.close()
 
-suspicious = 0
-
 def compare(x):
     for x in urls:
         try:
@@ -65,13 +64,13 @@ def compare(x):
                 print len(current_h) + len(current_o), "possible obfuscated iframe(s) detected"
                 print len(current_h), "hidden frame detected"
                 print len(current_o), "Base64 or Hex obfuscation detected"
-                suspicious = suspicious + 1
 
             elif current_i != base_i:
-                suspicious = suspicious + 1
-
+                
         except:
             pass
+
+
 
 def main():
     lookup(urls)
