@@ -63,8 +63,6 @@ def compare(x):
                 print len(current_h) + len(current_o), "possible obfuscated iframe(s) detected"
                 print len(current_h), "hidden frame detected"
                 print len(current_o), "Base64 or Hex obfuscation detected"
-
-            elif current_i != base_i:
                 
         except:
             pass
