@@ -19,12 +19,17 @@ filedate = time.strftime('%Y%m%d')
 
 #Configures Firefox Browser settings
 profile = webdriver.FirefoxProfile()
+profile.set_preference('network.proxy.type', 1)
+profile.set_preference('network.proxy.socks', '127.0.0.1')
+profile.set_preference('network.proxy.socks_port',9150)
 profile.set_preference("general.useragent.override", 'Mozilla/5.0 (Windows; U; Win 9x 4.90; SG; rv:1.9.2.4) Gecko/20101104 Netscape/9.1.0285')
 profile.set_preference("general.acceptlanguage.override","en-GB,en-US;q=0.8,en;q=0.6")
 profile.set_preference("general.acceptcharset.override","ISO-8859-1,utf-8;q=0.7,*;q=0.3")
 profile.set_preference("general.acceptencoding.override","gzip,deflate,sdch")
 
 def lookup(x):
+    os.startfile("C:\Users\MAN\Desktop\Python Files\Tor Browser\Browser\Firefox.exe")
+    time.sleep(1)
     driver = webdriver.Firefox(profile)
     for x in urls:
         try:
