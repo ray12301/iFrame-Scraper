@@ -43,7 +43,7 @@ def lookup(x):
         except:
             pass
 
-    driver.close()
+    os.system("TASKKILL /F /IM firefox.exe')
 
 def compare(x):
     for x in urls:
