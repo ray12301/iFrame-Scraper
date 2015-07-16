@@ -17,7 +17,7 @@ for x in url_input:
 
 filedate = time.strftime('%Y%m%d')
 
-#Configures Firefox Browser settings
+#Configures Selenium Scraper settings
 profile = webdriver.FirefoxProfile()
 profile.set_preference('network.proxy.type', 1)
 profile.set_preference('network.proxy.socks', '127.0.0.1')
